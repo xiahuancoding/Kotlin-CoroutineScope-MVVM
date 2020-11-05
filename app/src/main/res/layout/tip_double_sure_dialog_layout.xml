@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:minWidth="310dp"
+    android:minHeight="208dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="9dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/item_white_txt_FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="@string/example_string_tip_sure_title"
+            android:textColor="@color/ec_text_333333"
+            android:textSize="17sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:text="若您不同意本隐私权政策，很遗憾我们将无\n法继续为您提供服务。"
+            android:textColor="@color/ec_text_333333"
+            android:textSize="13sp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tip_disable"
+                android:layout_width="119dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="21dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/corner_22_f7f7f7"
+                android:gravity="center"
+                android:text="仍不同意"
+                android:textColor="@color/ec_text_999999" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tip_agree"
+                android:layout_width="119dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="21dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/gradual_red_to_yellow"
+                android:gravity="center"
+                android:text="查看协议"
+                android:textColor="@color/item_white_txt_FFFFFF" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>

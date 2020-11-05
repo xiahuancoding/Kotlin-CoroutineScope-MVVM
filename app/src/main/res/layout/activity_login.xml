@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/item_white_txt_FFFFFF"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/layoutToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_close_login"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="24dp"
+                android:src="@mipmap/icon_login_close" />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/sign_logo"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/icon_login_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/login_send_lly"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginRight="38dp"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/sign_logo">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/login_ed_send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="请输入手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textColor="@color/ec_text_999999"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_account_input_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:cropToPadding="true"
+            android:padding="3dp"
+            android:src="@mipmap/icon_input_close"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minWidth="81dp"
+            android:minHeight="22dp"
+            android:paddingLeft="6dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="获取验证码"
+            android:textColor="@color/ec_color_63DBD7"
+            android:textSize="14sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:background="@color/ec_text_f2f2f2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_send_lly">
+
+    </View>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/login_pwd_lly"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="38dp"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/login_send_lly">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/login_ed_pwd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="请输入验证码"
+            android:inputType="phone"
+            android:textColor="@color/ec_text_999999"
+            android:textSize="14sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_pwd_input_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:cropToPadding="true"
+            android:padding="3dp"
+            android:src="@mipmap/icon_input_close"
+            android:visibility="gone" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:background="@color/ec_text_f2f2f2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_pwd_lly" />
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/login_sure_lly"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="38dp"
+        android:background="@drawable/ec_shape_sign_in_sure_gray"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_pwd_lly">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/login_sure_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/item_white_txt_FFFFFF"
+            android:textSize="14sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvChangeSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="密码登录"
+        android:textColor="@color/ec_color_63DBD7"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/login_sure_lly"
+        app:layout_constraintTop_toBottomOf="@id/login_sure_lly" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="10dp"
+        android:text="新用户注册"
+        android:textColor="@color/ec_color_63DBD7"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@id/login_sure_lly"
+        app:layout_constraintTop_toBottomOf="@id/login_sure_lly" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/splitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:text="其他登录方式"
+        android:textColor="@color/ec_text_666666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/ivWx"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/splitLeft"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginRight="10dp"
+        android:background="#D8D8D8"
+        app:layout_constraintBottom_toBottomOf="@id/splitText"
+        app:layout_constraintLeft_toLeftOf="@id/tvChangeSign"
+        app:layout_constraintRight_toLeftOf="@id/splitText"
+        app:layout_constraintTop_toTopOf="@id/splitText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/splitRight"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="#D8D8D8"
+        app:layout_constraintBottom_toBottomOf="@id/splitText"
+        app:layout_constraintLeft_toRightOf="@id/splitText"
+        app:layout_constraintRight_toRightOf="@id/tvRegister"
+        app:layout_constraintTop_toTopOf="@id/splitText" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivWx"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="80dp"
+        android:background="@mipmap/ec_icon_sign_wx"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="微信登录"
+        android:textColor="@color/ec_color_7A7A7A"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivWx" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

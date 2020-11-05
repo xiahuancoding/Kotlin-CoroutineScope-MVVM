@@ -1,0 +1,7 @@
+<resources>
+<!--    <string name="app_name">reviewmycp</string>-->
+
+    <string name="now_loading">加载中…</string>
+    <string name="example_string_tip_sure_title">您需要同意本隐私权政策\n才能继续使用%1$s</string>
+
+</resources>

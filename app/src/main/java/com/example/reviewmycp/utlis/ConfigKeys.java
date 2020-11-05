@@ -1,0 +1,24 @@
+package com.example.reviewmycp.utlis;
+
+/**
+ * Created by  on 2017/3/29
+ */
+
+public enum ConfigKeys {
+    API_HOST,
+    APPLICATION_CONTEXT,
+    CONFIG_READY,
+    ICON,
+    LOADER_DELAYED,
+    INTERCEPTOR,
+    WE_CHAT_APP_ID,
+    ACTIVITY,
+    HANDLER,
+    JAVASCRIPT_INTERFACE,
+    VIDEO_CACHE,
+    LIVE_HOST, APP_IM_WS,
+    APP_STITSTIC_HOST,
+    APP_IM_HOST, LEAK_CANARY, DEBUG, USERID, APP_LIVE_IM,
+    INTEGRAL_URL,WWX_PAY,C_APP_IM_WS, APP_WWX_PAY_TYPE, C_API_IM,
+    H5_IM
+}
