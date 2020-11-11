@@ -22,4 +22,19 @@ open class BaseRepository {
         return RequestBody.create(MediaType.parse("application/json;charset=UTF-8"), json)
     }
 
+
+
+
+    companion object {
+
+        @Volatile
+        private var INSTANCE: BaseRepository? = null
+
+        fun getInstance() =
+            INSTANCE ?: synchronized(this) {
+                INSTANCE ?: BaseRepository().also { INSTANCE = it }
+            }
+    }
+
+
 }

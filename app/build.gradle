@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
 
 android {
     compileSdkVersion 29
@@ -165,5 +167,18 @@ dependencies {
         exclude group: 'com.google.android.material:material'
     })
 
+
+    //动态权限处理
+    implementation 'org.permissionsdispatcher:permissionsdispatcher:4.6.0'
+    annotationProcessor 'org.permissionsdispatcher:permissionsdispatcher-processor:4.6.0'
+
+    // 图库
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.9'
+
+    // glide处理图片
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    implementation 'jp.wasabeef:glide-transformations:4.0.1'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
 
 }

@@ -38,7 +38,7 @@ class RetrofitManager {
         retrofit = Retrofit.Builder()
             .client(getOkHttpClient())
             .addConverterFactory(GsonConverterFactory.create())
-//            .addConverterFactory(ScalarsConverterFactory.create())
+            .addConverterFactory(ScalarsConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .baseUrl(baseUrl)
             .build()

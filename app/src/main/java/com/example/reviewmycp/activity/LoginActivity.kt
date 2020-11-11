@@ -17,6 +17,7 @@ import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.example.reviewmycp.R
 import com.example.reviewmycp.net.HttpConstant
+import com.example.reviewmycp.utlis.LattePreference
 import com.example.reviewmycp.utlis.SmsType
 import com.example.reviewmycp.utlis.isChinaPhone
 import com.example.reviewmycp.viewmodel.LoginVM
@@ -49,6 +50,12 @@ class LoginActivity : BaseActivity<LoginVM>(){
     override fun initData() {
         viewModel.loginData.observe(this, Observer {
             LogUtils.d("itfreshman v1/member/login-old = $it")
+            // 保存登录token到本地
+            LogUtils.d("login_token 保存 = ${it.member.accessToken}")
+            LattePreference.addCustomAppProfile("login_token", it.member.accessToken)
+            PersonInfoActivity.jumpActivity(this)
+
+
         })
 
         viewModel.loginSendCodeData.observe(this, Observer {
@@ -171,15 +178,15 @@ class LoginActivity : BaseActivity<LoginVM>(){
     private fun switchLoginType() {
         if (viewModel.loginType == LoginVM.LOGIN_PWD){
             viewModel.loginType = LoginVM.LOGIN_CODE
-            login_ed_pwd?.hint = "请输入密码"
-            tvChangeSign?.text = "验证码登录"
-            tvSend?.visibility = View.GONE
-
-        }else{
-            viewModel.loginType = LoginVM.LOGIN_PWD
             login_ed_pwd?.hint = "请输入验证码"
             tvChangeSign?.text = "密码登录"
             tvSend?.visibility = View.VISIBLE
+
+        }else{
+            viewModel.loginType = LoginVM.LOGIN_PWD
+            login_ed_pwd?.hint = "请输入密码"
+            tvChangeSign?.text = "验证码登录"
+            tvSend?.visibility = View.GONE
         }
 
     }

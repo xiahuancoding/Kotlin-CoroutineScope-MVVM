@@ -3,13 +3,11 @@ package com.example.reviewmycp.net
 import com.example.reviewmycp.model.BaseResult
 import com.example.reviewmycp.model.LoginModel
 import com.example.reviewmycp.model.SendCodeModel
-import com.example.reviewmycp.utlis.Constant
+import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
 import retrofit2.Call
-import retrofit2.Response
 import retrofit2.http.*
-import rx.Observable
 import java.util.*
 
 interface ApiService {
@@ -30,5 +28,9 @@ interface ApiService {
     @GET
     suspend fun sendCode(@Url url: String, @QueryMap params: WeakHashMap<String, Any>): BaseResult<SendCodeModel>
 
+
+    @Multipart
+    @POST
+    fun uploadImage(@Url url: String, @Part file: MultipartBody.Part?): Call<ResponseBody>
 
 }

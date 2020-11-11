@@ -21,4 +21,10 @@ object HttpConstant {
      */
     const val SEND_CODE = "v1/member/sms"
 
+
+    /**
+     * 上传头像
+     */
+    const val UPLOAD_AVATAR = "v1/setting/edit-header"
+
 }

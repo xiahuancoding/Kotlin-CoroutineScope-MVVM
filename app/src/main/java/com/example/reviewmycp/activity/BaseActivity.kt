@@ -164,6 +164,7 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(), Coroutine
                 }
 
                 onSuccess {
+                    Log.d("xiecheng","携程请求的数据onSuccess-------")
                     viewModel.defUI.dismissDialog.call()
                     val json = it.string()
                     if(handleSuccessCode(json)){

@@ -2,4 +2,6 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="dialog_width">120dp</dimen>
+    <dimen name="toolbar_size">44dp</dimen>
+
 </resources>
