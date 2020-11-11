@@ -10,6 +10,11 @@ import retrofit2.Call
 import retrofit2.http.*
 import java.util.*
 
+
+/**
+ * 返回的实体是ResponseBody的，会返回一个完整的json数据
+ * 其他的实体都是给返回的json进行了封装的实体
+ */
 interface ApiService {
 
 

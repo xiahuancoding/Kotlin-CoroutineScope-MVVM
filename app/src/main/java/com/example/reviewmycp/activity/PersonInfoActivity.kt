@@ -35,7 +35,6 @@ class PersonInfoActivity : BaseActivity<PersonInfoVM>() {
 
 
 
-    private var picture = ""
 
     override fun layoutId(): Int = R.layout.activity_person_info
 
@@ -183,10 +182,10 @@ class PersonInfoActivity : BaseActivity<PersonInfoVM>() {
                     if (selectList.size > 0) {
                         val media = selectList[0]
                         if (media.isCompressed) {
-                            picture = media.compressPath
+                            viewModel.picture = media.compressPath
                         }
 
-                        uploadAvatar(picture)
+                        uploadAvatar(viewModel.picture)
                     }
                 }
             }
@@ -194,12 +193,9 @@ class PersonInfoActivity : BaseActivity<PersonInfoVM>() {
     }
 
     private fun uploadAvatar(picture: String) {
-        val file = File(picture)
-        val requestBody: RequestBody = RequestBody.create(MediaType.parse(MultipartBody.FORM.toString()), file)
-        val body = MultipartBody.Part.createFormData("avatar", file.name, requestBody)
-
+        viewModel.picture = picture
         launchString(
-            requestApi = viewModel.personRepo.mService.uploadImage(HttpConstant.UPLOAD_AVATAR,body),
+            requestApi = viewModel.personRepo.mService.uploadImage(HttpConstant.UPLOAD_AVATAR,viewModel.createImageBody()),
             successResult = {
                 Log.d("xiecheng","携程请求的数据successResult-----------------------${it}")
                 val data = JSON.parseObject(it).getString("data")
