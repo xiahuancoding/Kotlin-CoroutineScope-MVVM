@@ -6,6 +6,8 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.viewModelScope
 import com.aleyn.mvvm.event.Message
 import com.aleyn.mvvm.event.SingleLiveEvent
+import com.alibaba.fastjson.JSON
+import com.blankj.utilcode.util.ToastUtils
 import com.blankj.utilcode.util.Utils
 import com.example.reviewmycp.net.*
 import kotlinx.coroutines.*
@@ -165,8 +167,64 @@ import retrofit2.Call
     }
 
 
+    /**
+     * 请求网络数据，返回json原始数据
+     */
+    fun launchString(
+        isShowDialog: Boolean = true,
+        requestApi :(Call<ResponseBody>),
+        successResult: (String) -> Unit = {},
+        errorResult: (ResponseThrowable) -> Unit = {
+            defUI.toastEvent.postValue("${it.code}:${it.errMsg}")
+        },
+        completeResult: () -> Unit = {}
+    ){
 
+        if (isShowDialog) defUI.showDialog.call()
+        launchUI {
+            retrofit<ResponseBody> {
+                runBlocking {
+                    api = requestApi
+                }
 
+                onSuccess {
+                    defUI.dismissDialog.call()
+                    val json = it.string()
+                    Log.d("xiecheng","携程请求的数据onSuccess-------${json}")
+                    if(handleSuccessCode(json)){
+                        successResult(json)
+                    }else{
+                        val code = JSON.parseObject(json).getIntValue("code")
+                        val msg = JSON.parseObject(json).getString("message")
+                        ToastUtils.showShort("$code:$msg")
+                    }
+
+                }
+
+                onFail { msg, code ->
+                    Log.d("xiecheng","携程请求的数据fail-----------------------${msg} == $code")
+                    defUI.dismissDialog.call()
+                    errorResult(ResponseThrowable(code,msg))
+                }
+
+                onComplete {
+                    Log.d("xiecheng","携程请求的数据compelete---------------")
+                    defUI.dismissDialog.call()
+                    completeResult()
+                }
+
+            }
+        }
+    }
+
+    /**
+     * 处理接口请求后的业务code
+     */
+    private fun handleSuccessCode(json:String):Boolean {
+        val code = JSON.parseObject(json).getIntValue("code")
+        return code == 0
+
+    }
 
     /**
      * UI事件

@@ -15,14 +15,14 @@ object ExceptionHandle {
             return ResponseThrowable(ERROR.TOKEN_ERROR, e)
         }else{
             // 服务端业务错误code码处理
-            if(e.code >= 10000){
+            if(e.code >= 10000 || e.code == 500){
                return ResponseThrowable(e.code,e.errMsg,e)
             }
 
-            // 网络服务器错误
-            if (e.code in 500..9999){
-                return ResponseThrowable(ERROR.SERVICE_ERROR, e)
-            }
+//            // 网络服务器错误
+//            if (e.code in 500..9999){
+//                return ResponseThrowable(ERROR.SERVICE_ERROR, e)
+//            }
         }
 
         return ResponseThrowable(ERROR.UNKNOWN, e)

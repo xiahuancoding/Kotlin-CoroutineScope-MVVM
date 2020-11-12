@@ -2,6 +2,8 @@ package com.example.reviewmycp.repository
 
 import com.example.reviewmycp.model.BaseResult
 import com.example.reviewmycp.net.IBaseResponse
+import okhttp3.ResponseBody
+import retrofit2.Call
 import java.util.*
 
 class SplashRepo : BaseRepository(){

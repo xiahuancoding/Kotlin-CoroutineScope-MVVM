@@ -143,64 +143,6 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(), Coroutine
     }
 
 
-    /**
-     * 请求网络数据，返回json原始数据
-     */
-    fun launchString(
-        isShowDialog: Boolean = true,
-        requestApi :(Call<ResponseBody>),
-        successResult: (String) -> Unit = {},
-        errorResult: (ResponseThrowable) -> Unit = {
-            viewModel.defUI.toastEvent.postValue("${it.code}:${it.errMsg}")
-        },
-        completeResult: () -> Unit = {}
-    ){
-
-        if (isShowDialog) viewModel.defUI.showDialog.call()
-        viewModel.launchUI {
-            retrofit<ResponseBody> {
-                runBlocking {
-                    api = requestApi
-                }
-
-                onSuccess {
-                    Log.d("xiecheng","携程请求的数据onSuccess-------")
-                    viewModel.defUI.dismissDialog.call()
-                    val json = it.string()
-                    if(handleSuccessCode(json)){
-                        successResult(json)
-                    }else{
-                        val code = JSON.parseObject(json).getIntValue("code")
-                        val msg = JSON.parseObject(json).getString("message")
-                        ToastUtils.showShort("$code:$msg")
-                    }
-
-                }
-
-                onFail { msg, code ->
-                    Log.d("xiecheng","携程请求的数据fail-----------------------${msg} == $code")
-                    viewModel.defUI.dismissDialog.call()
-                    errorResult(ResponseThrowable(code,msg))
-                }
-
-                onComplete {
-                    Log.d("xiecheng","携程请求的数据compelete---------------")
-                    viewModel.defUI.dismissDialog.call()
-                    completeResult()
-                }
-
-            }
-        }
-    }
-
-    /**
-     * 处理接口请求后的业务code
-     */
-    private fun handleSuccessCode(json:String):Boolean {
-        val code = JSON.parseObject(json).getIntValue("code")
-        return code == 0
-
-    }
 
     override fun onDestroy() {
         super.onDestroy()

@@ -194,7 +194,7 @@ class PersonInfoActivity : BaseActivity<PersonInfoVM>() {
 
     private fun uploadAvatar(picture: String) {
         viewModel.picture = picture
-        launchString(
+        viewModel.launchString(
             requestApi = viewModel.personRepo.mService.uploadImage(HttpConstant.UPLOAD_AVATAR,viewModel.createImageBody()),
             successResult = {
                 Log.d("xiecheng","携程请求的数据successResult-----------------------${it}")

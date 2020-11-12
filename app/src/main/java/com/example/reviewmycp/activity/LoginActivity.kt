@@ -112,7 +112,7 @@ class LoginActivity : BaseActivity<LoginVM>(){
         val params = WeakHashMap<String,Any>()
         params["phone"] = viewModel.phone
         params["type"] = SmsType.CODE_SIGN_IN
-        launchString(
+        viewModel.launchString(
             requestApi = viewModel.loginRepo.mService.getString(HttpConstant.SEND_CODE,params),
             successResult = {
                 Log.d("xiecheng","携程请求的数据successResult-----------------------${it}")
@@ -200,7 +200,26 @@ class LoginActivity : BaseActivity<LoginVM>(){
         viewModel.code = login_ed_pwd?.text.toString()
 
         if (checkInputInfo()) return
-        viewModel.loginByVerifyCode()
+        val params = WeakHashMap<String,Any>()
+        params["account"] =  viewModel.phone
+        params["code"] =  viewModel.code
+        viewModel.launchString(
+            requestApi = viewModel.loginRepo.mService.postString(HttpConstant.USER_LOGIN_CODE,
+                viewModel.loginRepo.params2Body(params)),
+            successResult = {
+                Log.d("xiecheng","携程请求的数据successResult-----------------------${it}")
+
+
+            },
+            errorResult = {
+                Log.d("xiecheng","携程请求的数据errorResult-------------------- ${it.code} ${it.errMsg} ==")
+                ToastUtils.showShort(""+it.code + it.errMsg)
+            },
+            completeResult = {
+                Log.d("xiecheng","携程请求的数据completeResult----------------------")
+
+            })
+//        viewModel.loginByVerifyCode()
     }
 
     private fun loginLocalPwd() {

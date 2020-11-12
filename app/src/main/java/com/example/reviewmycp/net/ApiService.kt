@@ -25,6 +25,9 @@ interface ApiService {
     @GET
     fun getString(@Url url: String?, @QueryMap params: WeakHashMap<String, Any>): Call<ResponseBody>
 
+    @POST
+    fun postString(@Url url:String, @Body body: RequestBody):Call<ResponseBody>
+
 
     @POST
     suspend fun login(@Url url:String, @Body body: RequestBody) : BaseResult<LoginModel>
