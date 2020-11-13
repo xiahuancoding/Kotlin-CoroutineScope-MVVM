@@ -17,10 +17,7 @@ import com.example.reviewmycp.net.retrofit
 import com.example.reviewmycp.utlis.ViewModelFactory
 import com.example.reviewmycp.viewmodel.BaseViewModel
 import io.reactivex.disposables.CompositeDisposable
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 import okhttp3.ResponseBody
 import qiu.niorgai.StatusBarCompat
 import retrofit2.Call
@@ -59,6 +56,7 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(), Coroutine
             StatusBarCompat.translucentStatusBar(this, true)
             StatusBarCompat.changeToLightStatusBar(this)
         }
+
     }
 
     abstract fun layoutId():Int
@@ -74,7 +72,7 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(), Coroutine
 
     }
 
-    // 是否需要沉浸式状态栏,默认需要，不要重写这个方法传false
+    // 是否需要沉浸式状态栏,默认需要，不需要的话重写这个方法传false
     open fun isNeedStatusBar():Boolean = true
 
     fun showMessage(msg:String){
@@ -144,10 +142,12 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(), Coroutine
 
 
 
+
     override fun onDestroy() {
         super.onDestroy()
         compositeDisposable.dispose()
         compositeDisposable.clear()
+
     }
 
 }

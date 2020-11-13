@@ -5,6 +5,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"/>
+
+
     <Button
         android:id="@+id/btn_set_name"
         android:layout_width="wrap_content"

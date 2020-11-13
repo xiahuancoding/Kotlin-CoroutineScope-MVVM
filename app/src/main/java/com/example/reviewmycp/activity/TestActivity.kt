@@ -3,6 +3,7 @@ package com.example.reviewmycp.activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.Window
 import com.example.reviewmycp.R
 import com.example.reviewmycp.fragment.Test1Fag
 import com.example.reviewmycp.fragment.Test2Fag
@@ -12,7 +13,12 @@ class TestActivity:BaseActivity<TestVM>(){
 
 
 
+
     override fun layoutId(): Int = R.layout.activity_test
+
+    override fun initBeforeSetContentView() {
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
+    }
 
     override fun initView(savedInstanceState: Bundle?) {
 
@@ -24,7 +30,7 @@ class TestActivity:BaseActivity<TestVM>(){
     override fun initData() {
     }
 
-
+    override fun isNeedStatusBar(): Boolean = false
 
     companion object {
         fun jumpActivity(context: Context){
