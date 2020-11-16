@@ -56,7 +56,6 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(), Coroutine
             StatusBarCompat.translucentStatusBar(this, true)
             StatusBarCompat.changeToLightStatusBar(this)
         }
-
     }
 
     abstract fun layoutId():Int
