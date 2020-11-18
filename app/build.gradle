@@ -31,27 +31,7 @@ android {
     flavorDimensions "country"
     productFlavors {
 
-        online_mingyichuping {
-            applicationId "com.example.reviewmycp"
-//            buildConfigField "String", "APP_HOST", '"https://mycpapi.ec-cloudtech.com/"'
-            buildConfigField "String", "APP_HOST", '"https://m.chupinshop.com/"'
-            buildConfigField "String", "APP_IM_WS", '"wss://mycpim.ec-cloudtech.com/ws/member?token="'
-            buildConfigField "String", "APP_IM_HOST", '"https://mycpim.ec-cloudtech.com/im/"'
-            buildConfigField "String", "APP_STITSTIC_HOST", '"https://wzgstatapi.ec-cloudtech.com/"'
-            buildConfigField "String", "WX_APPID", '"wx67b01e28e6097379"'
-            buildConfigField "String", "APP_LIVE_HOST", '"https://liveapi.ec-cloudtech.com/"'
-            buildConfigField "String", "APP_LIVE_IM", '"wss://livews.ec-cloudtech.com"'
-            buildConfigField "String", "APP_WWX_PAY", '"http://api-wwx.ec-cloudtech.com/"'
-            buildConfigField "String", "C_APP_IM_WS", '"wss://cpim.ec-cloudtech.com/ws/{userid}/{salt}/websocket"'
-//            https://wap.chupinshop.com/kefu/customers/latestmessage
-            buildConfigField "String", "C_APP_IM_API", '"https://wap.chupinshop.com"'
-//            buildConfigField "String", "C_APP_IM_API", '"https://cpim.ec-cloudtech.com"'
-            buildConfigField "String", "H5_IM", '"https://wap.chupinshop.com/h5/index.html#/im"'
-            // 注意，这里是添加，在 string.xml 不能有这个字段，会重名！！！
-            resValue "string", "app_name", "mycp"
-            manifestPlaceholders = [app_icon: "@mipmap/icon_mycp_logo"]
-            dimension "country"
-        }
+
         offline_mingyichuping {
             applicationId "com.example.reviewmycp"
             //提审地址
@@ -180,5 +160,8 @@ dependencies {
     implementation 'jp.wasabeef:glide-transformations:4.0.1'
     implementation 'com.github.bumptech.glide:okhttp3-integration:4.10.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+    // 自己测试上传的一个依赖库
+    implementation 'com.github.xiahuancoding:TestGitRepository:1.0.0'
 
 }
