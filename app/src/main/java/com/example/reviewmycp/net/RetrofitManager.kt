@@ -1,7 +1,6 @@
 package com.example.reviewmycp.net
 
 import com.example.reviewmycp.net.intercept.Level
-import com.example.reviewmycp.net.intercept.LoggingInterceptor
 import com.example.reviewmycp.utlis.ConfigKeys
 import com.example.reviewmycp.utlis.Latte
 import okhttp3.ConnectionPool

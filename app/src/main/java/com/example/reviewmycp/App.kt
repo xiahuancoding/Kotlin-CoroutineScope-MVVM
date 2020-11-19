@@ -8,15 +8,15 @@ import kotlinx.coroutines.launch
 class App : Application() {
 
 
-    override fun onCreate() {
-        super.onCreate()
-        initConfig()
-    }
+  override fun onCreate() {
+    super.onCreate()
+    initConfig()
+  }
 
-    private fun initConfig() {
-        GlobalScope.launch {
-            Latte.init(applicationContext)
-                .withApiHost(BuildConfig.APP_HOST)
+  private fun initConfig() {
+    GlobalScope.launch {
+      Latte.init(applicationContext)
+        .withApiHost(BuildConfig.APP_HOST)
 //                .withH5IM(BuildConfig.H5_IM)
 //                .withUseId(0)
 //                .withLoaderDelayed(500)
@@ -34,11 +34,9 @@ class App : Application() {
 //                .withCImApp(BuildConfig.C_APP_IM_API)
 //                .withDeBug(BuildConfig.IS_BETA)
 //                .withWWXTYPE(BuildConfig.APP_WWX_PAY_TYPE)
-                .configure()
+        .configure()
 
 
-        }
     }
-
-
+  }
 }
