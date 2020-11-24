@@ -163,5 +163,11 @@ dependencies {
 
     // 自己测试上传的一个依赖库
     implementation 'com.github.xiahuancoding:TestGitRepository:1.0.0'
+    // 底部导航
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
+    implementation "com.android.support:design:29.0.0"
+    // 消息气泡
+    implementation 'q.rorbin:badgeview:1.1.0'
+
 
 }

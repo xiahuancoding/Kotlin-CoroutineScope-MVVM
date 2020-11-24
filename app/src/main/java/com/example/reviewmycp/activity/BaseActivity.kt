@@ -2,6 +2,7 @@ package com.example.reviewmycp.activity
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -64,7 +65,7 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(), Coroutine
 
     // 如果某些Activity需要再setContentView之前初始化一些东西，比如全屏，去掉标题栏，重写此方法
     open fun initBeforeSetContentView(){
-
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
     }
     // 如果需要写控件的监听，集中在这里写
     open fun registerListener(){

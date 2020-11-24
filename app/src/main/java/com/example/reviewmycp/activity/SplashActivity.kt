@@ -72,9 +72,10 @@ class SplashActivity : BaseActivity<SplashVM>(){
     }
 
     private fun jumpToMain() {
-        LoginActivity.jumpActivity(this)
+//        LoginActivity.jumpActivity(this)
 //        TestActivity.jumpActivity(this)
 //        PersonInfoActivity.jumpActivity(this)
+        MainActivity.jumpActivity(this)
         finish()
     }
 
