@@ -82,7 +82,7 @@ fun <T> CoroutineScope.retrofit(dsl: RetrofitCoroutineDSL<T>.() -> Unit) {
                             coroutine.onFail?.invoke(response.message() ?: "返回数据为空", response.code())
                         }
                     } else {
-                        coroutine.onFail?.invoke(response.errorBody().toString(), response.code())
+                        coroutine.onFail?.invoke(response.message(), response.code())
                     }
                 }
             }

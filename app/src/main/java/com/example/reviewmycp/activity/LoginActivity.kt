@@ -7,9 +7,10 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.view.View
-import android.view.Window
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import com.alibaba.fastjson.JSON
@@ -37,10 +38,6 @@ class LoginActivity : BaseActivity<LoginVM>(){
 
     override fun layoutId(): Int = R.layout.activity_login
 
-    override fun initBeforeSetContentView() {
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
-    }
-
 
     override fun initView(savedInstanceState: Bundle?) {
         login_sure_lly.isEnabled = false
@@ -53,7 +50,8 @@ class LoginActivity : BaseActivity<LoginVM>(){
             // 保存登录token到本地
             LogUtils.d("login_token 保存 = ${it.member.accessToken}")
             LattePreference.addCustomAppProfile("login_token", it.member.accessToken)
-            PersonInfoActivity.jumpActivity(this)
+            MainActivity.jumpActivity(this)
+//            PersonInfoActivity.jumpActivity(this)
 
 
         })
@@ -181,12 +179,15 @@ class LoginActivity : BaseActivity<LoginVM>(){
             login_ed_pwd?.hint = "请输入验证码"
             tvChangeSign?.text = "密码登录"
             tvSend?.visibility = View.VISIBLE
+            login_ed_pwd.transformationMethod = HideReturnsTransformationMethod.getInstance()
 
         }else{
             viewModel.loginType = LoginVM.LOGIN_PWD
             login_ed_pwd?.hint = "请输入密码"
             tvChangeSign?.text = "验证码登录"
             tvSend?.visibility = View.GONE
+            login_ed_pwd.transformationMethod = PasswordTransformationMethod.getInstance()
+
         }
 
     }

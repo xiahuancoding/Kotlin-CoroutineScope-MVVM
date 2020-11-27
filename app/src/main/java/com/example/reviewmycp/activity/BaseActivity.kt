@@ -45,7 +45,9 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(), Coroutine
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         job = Job()
-        initBeforeSetContentView()
+        if (!isNeedWindowTitle()){
+            supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
+        }
         setContentView(layoutId())
         createViewModel()
         lifecycle.addObserver(viewModel)
@@ -63,10 +65,9 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(), Coroutine
     abstract fun initView(savedInstanceState: Bundle?)
     abstract fun initData()
 
-    // 如果某些Activity需要再setContentView之前初始化一些东西，比如全屏，去掉标题栏，重写此方法
-    open fun initBeforeSetContentView(){
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
-    }
+    // 是否需要标题栏，默认不需要,需要的话重写此方法传true
+    open fun isNeedWindowTitle() : Boolean = false
+
     // 如果需要写控件的监听，集中在这里写
     open fun registerListener(){
 

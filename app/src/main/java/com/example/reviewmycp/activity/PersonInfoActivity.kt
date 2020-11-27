@@ -38,10 +38,6 @@ class PersonInfoActivity : BaseActivity<PersonInfoVM>() {
 
     override fun layoutId(): Int = R.layout.activity_person_info
 
-    override fun initBeforeSetContentView() {
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
-    }
-
 
     override fun initView(savedInstanceState: Bundle?) {
 

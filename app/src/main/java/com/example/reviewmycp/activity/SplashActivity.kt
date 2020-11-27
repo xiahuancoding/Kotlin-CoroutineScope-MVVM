@@ -72,18 +72,14 @@ class SplashActivity : BaseActivity<SplashVM>(){
     }
 
     private fun jumpToMain() {
-//        LoginActivity.jumpActivity(this)
+        LoginActivity.jumpActivity(this)
 //        TestActivity.jumpActivity(this)
 //        PersonInfoActivity.jumpActivity(this)
-        MainActivity.jumpActivity(this)
+//        MainActivity.jumpActivity(this)
         finish()
     }
 
 
-    override fun initBeforeSetContentView() {
-        super.initBeforeSetContentView()
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
-    }
 
 
     override fun onResume() {

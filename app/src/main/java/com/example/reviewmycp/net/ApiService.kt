@@ -1,8 +1,6 @@
 package com.example.reviewmycp.net
 
-import com.example.reviewmycp.model.BaseResult
-import com.example.reviewmycp.model.LoginModel
-import com.example.reviewmycp.model.SendCodeModel
+import com.example.reviewmycp.model.*
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
@@ -20,7 +18,6 @@ interface ApiService {
 
     @GET
     suspend fun get(@Url url: String?, @QueryMap params: WeakHashMap<String, Any>): BaseResult<String>
-
 
     @GET
     fun getString(@Url url: String?, @QueryMap params: WeakHashMap<String, Any>): Call<ResponseBody>
@@ -40,5 +37,21 @@ interface ApiService {
     @Multipart
     @POST
     fun uploadImage(@Url url: String, @Part file: MultipartBody.Part?): Call<ResponseBody>
+
+
+    @GET
+    suspend fun requestUserInfo(@Url url: String?, @QueryMap params: WeakHashMap<String, Any>): BaseResult<UserInfoModel>
+
+    @GET
+    suspend fun requestUserMoney(@Url url: String?, @QueryMap params: WeakHashMap<String, Any>): BaseResult<UserMoneyModel>
+
+
+    // 获取店主申请的数据
+    @POST
+    suspend fun requestApplyShopManager(@Url url:String, @Body body: RequestBody): BaseResult<UserAsKeeperInfo>
+
+    // 店主申请的开关
+    @POST
+    suspend fun requestApplyShopManagerSwitch(@Url url:String, @Body body: RequestBody): BaseResult<Boolean>
 
 }

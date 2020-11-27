@@ -12,13 +12,7 @@ import com.example.reviewmycp.viewmodel.TestVM
 class TestActivity:BaseActivity<TestVM>(){
 
 
-
-
     override fun layoutId(): Int = R.layout.activity_test
-
-    override fun initBeforeSetContentView() {
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
-    }
 
     override fun initView(savedInstanceState: Bundle?) {
 
@@ -36,7 +30,6 @@ class TestActivity:BaseActivity<TestVM>(){
         fun jumpActivity(context: Context){
             context.startActivity(Intent(context,TestActivity::class.java))
         }
-
     }
 
 }

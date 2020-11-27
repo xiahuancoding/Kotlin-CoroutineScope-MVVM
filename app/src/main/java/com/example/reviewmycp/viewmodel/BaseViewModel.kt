@@ -202,7 +202,7 @@ import retrofit2.Call
                 }
 
                 onFail { msg, code ->
-                    Log.d("xiecheng","携程请求的数据fail-----------------------${msg} == $code")
+                    Log.d("xiecheng","携程请求的数据fail-----------------------${code} == $msg")
                     defUI.dismissDialog.call()
                     errorResult(ResponseThrowable(code,msg))
                 }

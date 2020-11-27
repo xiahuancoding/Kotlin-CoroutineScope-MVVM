@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutShop2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginRight="12dp"
+    android:background="@drawable/shape_corner_10_white"
+    >
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvShopTitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="我的店铺"
+        android:textColor="@color/ec_text_050505"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSplit"
+        android:layout_width="1dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginBottom="2dp"
+        android:background="#AAAAAA"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tvShopTitle2"
+        app:layout_constraintLeft_toRightOf="@id/tvShopTitle2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvShopIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:includeFontPadding="false"
+        android:textColor="#DF2C3F"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tvShopTitle2"
+        app:layout_constraintLeft_toRightOf="@id/tvSplit" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iconShopArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="12dp"
+        android:gravity="center"
+        android:visibility="visible"
+        android:src="@mipmap/icon_grade_arrow_right"
+        app:layout_constraintBottom_toBottomOf="@id/tvShopIntro"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvShopIntro" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutMyTeam"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/layoutServiceIncome"
+        app:layout_constraintTop_toBottomOf="@id/tvShopTitle2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconMyTeam"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:src="@mipmap/icon_shop_flow_new"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="店铺流量"
+            android:textColor="@color/ec_color_7A7A7A"
+            android:textSize="13sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutServiceIncome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/layoutMyTeam"
+        app:layout_constraintRight_toLeftOf="@+id/layoutRecommendIncome"
+        app:layout_constraintTop_toBottomOf="@id/tvShopTitle2">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconServiceIncome"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:src="@mipmap/icon_custom_manager"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="客户管理"
+            android:textColor="@color/ec_color_7A7A7A"
+            android:textSize="13sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutRecommendIncome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/layoutServiceIncome"
+        app:layout_constraintRight_toLeftOf="@+id/layoutTotalInCome"
+        app:layout_constraintTop_toBottomOf="@id/tvShopTitle2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconRecommendIncome"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:src="@mipmap/icon_shop_yeji"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="销售订单"
+            android:textColor="@color/ec_color_7A7A7A"
+            android:textSize="13sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutTotalInCome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/layoutRecommendIncome"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvShopTitle2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconTotalIncome"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:src="@mipmap/icon_shop_yeji"
+             />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="店铺业绩"
+            android:textColor="@color/ec_color_7A7A7A"
+            android:textSize="13sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

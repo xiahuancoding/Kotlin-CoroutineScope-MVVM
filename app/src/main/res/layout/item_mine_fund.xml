@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mine_all_fund"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginRight="12dp"
+    android:background="@drawable/shape_corner_10_white"
+    android:paddingBottom="8dp"
+    app:layout_goneMarginTop="6dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_mine_fund_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="我的资产"
+        android:textColor="@color/ec_text_050505"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_eyes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:src="@mipmap/icon_fund_eye_open"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_mine_fund_title"
+        app:layout_constraintLeft_toRightOf="@+id/tv_mine_fund_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_mine_fund_title" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_shop_master_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mine_fund_title">
+
+
+        <!-- 总收入 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_all_total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_all_total_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/ec_text_333333"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/mine_user_total_money"
+                android:textColor="#7A7A7A"
+                android:textSize="12sp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#E5E5E5" />
+
+        <!-- 余额 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_remain_money"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_remain_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/ec_text_333333"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="余额(元)"
+                android:textColor="#7A7A7A"
+                android:textSize="12sp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#E5E5E5" />
+
+        <!-- 阳光值 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_lively_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_lively_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/ec_text_333333"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/mine_text_lively_values"
+                android:textColor="#7A7A7A"
+                android:textSize="12sp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- 非店主的只有余额  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_normal_remain_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_normal_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的资产"
+            android:textStyle="bold"
+            android:textColor="@color/ec_text_333333"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="14sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_eyes_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="3dp"
+            android:src="@mipmap/icon_fund_eye_open"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_normal_money"
+            app:layout_constraintLeft_toRightOf="@+id/tv_normal_money"
+            app:layout_constraintTop_toTopOf="@+id/tv_normal_money" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_normal_money">
+
+
+
+
+            <!-- 余额 -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_remain_money2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_normal_remain_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/ec_text_333333"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="余额(元)"
+                    android:textColor="#7A7A7A"
+                    android:textSize="12sp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="#E5E5E5" />
+
+            <!-- 阳光值 -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_lively_value2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_lively_value2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/ec_text_333333"
+                    android:textSize="19sp"
+                    android:text="0"
+                    android:textStyle="bold" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/mine_text_lively_values"
+                    android:textColor="#7A7A7A"
+                    android:textSize="12sp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

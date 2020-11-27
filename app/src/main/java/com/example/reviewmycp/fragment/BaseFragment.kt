@@ -46,9 +46,11 @@ abstract class BaseFragment<VM : BaseViewModel>:Fragment(){
         //注册 UI事件
         registerDefUIChange()
         initView(savedInstanceState)
+        initData()
     }
 
-    open fun initView(savedInstanceState: Bundle?) {}
+    abstract fun initView(savedInstanceState: Bundle?)
+    abstract fun initData()
 
     override fun onResume() {
         super.onResume()

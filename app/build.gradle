@@ -34,11 +34,7 @@ android {
 
         offline_mingyichuping {
             applicationId "com.example.reviewmycp"
-            //提审地址
-//            buildConfigField "String", "APP_HOST", '"http://mycpapi.test.ec-cloudtech.com/"'
-//            http://cpapi.dev.topstore.cn/#/
-//            buildConfigField "String", "APP_HOST", '"http://mycptestapi.ec-cloudtech.com/"'
-            buildConfigField "String", "APP_HOST", '"http://cpapi.dev.topstore.cn/"'
+            buildConfigField "String", "APP_HOST", '"http://cpapi.dev.jzwp.cn/"'
             buildConfigField "String", "APP_IM_WS", '"ws://mycptestim.ec-cloudtech.com/ws/member?token="'
             buildConfigField "String", "APP_STITSTIC_HOST", '"http://wzgteststatapi.ec-cloudtech.com/"'
             buildConfigField "String", "APP_IM_HOST", '"http://114.55.146.91:8080"'
@@ -51,10 +47,10 @@ android {
             buildConfigField "String", "APP_WWX_PAY", '"http://api-wwx.test.ec-cloudtech.com/"'
 //            buildConfigField "String", "APP_WWX_PAY", '"http://api-wwx.ec-cloudtech.com/"'
 
-            buildConfigField "String", "C_APP_IM_WS", '"ws://cpapi.dev.topstore.cn/agentws/ws/{userid}/{salt}/websocket"'
+            buildConfigField "String", "C_APP_IM_WS", '"ws://cpapi.dev.jzwp.cn/agentws/ws/{userid}/{salt}/websocket"'
 //            buildConfigField "String", "C_APP_IM_API", '"http://cpapi.dev.topstore.cn/agent"'
-            buildConfigField "String", "C_APP_IM_API", '"http://cpapi.dev.topstore.cn"'
-            buildConfigField "String", "H5_IM", '"http://cpapi.dev.topstore.cn/h5/index.html#/im"'
+            buildConfigField "String", "C_APP_IM_API", '"http://cpapi.dev.jzwp.cn"'
+            buildConfigField "String", "H5_IM", '"http://cpapi.dev.jzwp.cn/h5/index.html#/im"'
 
 
 //            buildConfigField "String", "C_APP_IM_WS", '"ws://114.55.146.91:9000/ws/{userid}/{salt}/websocket"'
@@ -168,6 +164,9 @@ dependencies {
     implementation "com.android.support:design:29.0.0"
     // 消息气泡
     implementation 'q.rorbin:badgeview:1.1.0'
+
+    // Recyclerview三方库
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
 
 
 }
