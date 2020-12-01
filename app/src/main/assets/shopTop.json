@@ -1,0 +1,37 @@
+{
+  "time": 1588054708.185,
+  "message": "ok",
+  "code": 0,
+  "status": 200,
+  "data": [
+    {
+      "timeName": "今日",
+      "countNum": "3565",
+      "personNum": "4555",
+      "goodsNum": "5233"
+
+    },
+    {
+
+      "timeName": "昨日",
+      "countNum": "0",
+      "personNum": "37,599",
+      "goodsNum": "8878"
+
+    },
+    {
+
+      "timeName": "本月",
+      "countNum": "18,779",
+      "personNum": "88,789",
+      "goodsNum": "7789"
+
+    },
+    {
+
+      "timeName": "上月",
+      "countNum": "48,779",
+      "personNum": "9,148,779",
+      "goodsNum": "7,148,779"
+    }
+  ]}

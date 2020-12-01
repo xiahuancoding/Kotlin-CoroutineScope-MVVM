@@ -1,0 +1,41 @@
+{
+  "code": 0,
+  "message": "成功",
+  "data": {
+    "live_room": {
+      "room_key": "R0001",
+      "room_name": "一个房间信息",
+      "head_picture": "http://wyhmerchant.oss-cn-beijing.aliyuncs.com/merchant/app_logo_apk_1_20190529051107_s.jpg"
+    },
+    "status": 1,
+    "scene_key": "S2019102811191528133",
+    "posters_url": "http://wyhmerchant.oss-cn-beijing.aliyuncs.com/merchant/app_logo_apk_1_20190529051107_s.jpg",
+    "content_introduce": "卖包包",
+    "play_url": "",
+    "live_user_id": 4,
+    "scene_customer_num": 0,
+    "total_customer_num": 0,
+    "sales_num": 0,
+    "like_num": 0,
+    "pre_mark_num": 11,
+    "goods_info": {
+      "total_goods_num": 5,
+      "recommend_list": [
+        {
+          "platform_goods_id": 554,
+          "title": "包包2",
+          "code_no": 2,
+          "price": "33.00",
+          "thumbnail_url": "http://pzgvvy5he.bkt.clouddn.com/live-server/abc_1571230724_20191016205844_d-test.jpg"
+        },
+        {
+          "platform_goods_id": 554,
+          "title": "包包1",
+          "code_no": 1,
+          "price": "33.00",
+          "thumbnail_url": "http://wyhmerchant.oss-cn-beijing.aliyuncs.com/merchant/app_logo_apk_1_20190529051107_s.jpg"
+        }
+      ]
+    }
+  }
+}

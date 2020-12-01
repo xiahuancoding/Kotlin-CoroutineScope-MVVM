@@ -1,0 +1,121 @@
+{
+  "time": 1566178249.138,
+  "message": "ok",
+  "code": 0,
+  "status": 200,
+  "data": {
+    "recruit_img": "https://img.weizhegouquanqiufuwuzhongxin.cn/1565429060827",
+    "recommendCat": [
+      {
+        "id": "1",
+        "pid": "0",
+        "name": "全部商品",
+        "thumb": "https://qnimg.ec-cloudtech.com/1565610738948",
+        "level": "1",
+        "sort": "17",
+        "num": "0",
+        "keywords": "",
+        "describe": "",
+        "position": "null",
+        "attribute_data": "",
+        "display": "1",
+        "display_index": "1",
+        "delflag": "0",
+        "created_at": "1563799876",
+        "updated_at": "1563799876",
+        "imgs": "https://imgs.zuihuigou.shop/1563262493902",
+        "type": "coupon",
+        "url": "/pages/classification/classification?activeItem=0"
+      },
+      {
+        "id": "38",
+        "pid": "0",
+        "name": "我的订单",
+        "thumb": "https://qnimg.ec-cloudtech.com/1565610746457",
+        "level": "1",
+        "sort": "16",
+        "num": "0",
+        "keywords": "",
+        "describe": "",
+        "position": "null",
+        "attribute_data": "",
+        "display": "1",
+        "display_index": "1",
+        "delflag": "0",
+        "created_at": "1563356186",
+        "updated_at": "1563356186",
+        "imgs": "https://imgs.zuihuigou.shop/1563262539865",
+        "type": "category",
+        "url": "/order/mine"
+      },
+      {
+        "id": "39",
+        "pid": "0",
+        "name": "海外直邮",
+        "thumb": "https://qnimg.ec-cloudtech.com/1565665909217",
+        "level": "1",
+        "sort": "15",
+        "num": "0",
+        "keywords": "",
+        "describe": "",
+        "position": "null",
+        "attribute_data": "",
+        "display": "1",
+        "display_index": "1",
+        "delflag": "0",
+        "created_at": "1563356197",
+        "updated_at": "1563356197",
+        "imgs": "https://imgs.zuihuigou.shop/1563262553351",
+        "type": "category",
+        "url": "/pages/classification/classification?activeItem=43"
+      },
+      {
+        "id": "40",
+        "pid": "0",
+        "name": " 新手导航",
+        "thumb": "https://qnimg.ec-cloudtech.com/1565610751894",
+        "level": "1",
+        "sort": "14",
+        "num": "0",
+        "keywords": "",
+        "describe": "",
+        "position": "null",
+        "attribute_data": "",
+        "display": "1",
+        "display_index": "1",
+        "delflag": "0",
+        "created_at": "1563356208",
+        "updated_at": "1563356208",
+        "imgs": "https://imgs.zuihuigou.shop/1563262571466",
+        "type": "category",
+        "url": "/page/index/guide?activeItem=43"
+      }
+    ],
+    "recommendList": [
+      {
+        "imgs": "https://img.weizhegouquanqiufuwuzhongxin.cn/1566357747456.jpg",
+        "type": "category",
+        "name": "全部商品",
+        "param": ""
+      },
+      {
+        "imgs": "https://img.weizhegouquanqiufuwuzhongxin.cn/1566357856507.jpg",
+        "type": "order",
+        "name": "我的订单",
+        "param": ""
+      },
+      {
+        "imgs": "https://img.weizhegouquanqiufuwuzhongxin.cn/1566356949816.jpg",
+        "type": "category",
+        "name": "海外直邮",
+        "param": "43"
+      },
+      {
+        "imgs": "https://img.weizhegouquanqiufuwuzhongxin.cn/1566356957661.jpg",
+        "type": "richText",
+        "name": "新手导航",
+        "param": ""
+      }
+    ]
+  }
+}

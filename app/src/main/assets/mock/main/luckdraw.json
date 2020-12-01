@@ -1,0 +1,62 @@
+{
+  "time": 1569727978.838,
+  "message": "ok",
+  "code": 0,
+  "status": 200,
+  "data": {
+    "free_id": 367,
+    "title": "免单",
+    "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1569673908735.jpg",
+    "start_time": "2019-09-27 00:00:00",
+    "end_time": "2019-10-31 00:00:00",
+    "goods_items": [
+      {
+        "id": "578",
+        "title": "雅诗兰黛 新款抗蓝光小棕眼霜 15ml",
+        "market_price": "765.00",
+        "shop_price": "459.00",
+        "cost_price": "350.00",
+        "member_price": "20%",
+        "store_price": "453",
+        "partner_price": "448",
+        "user_price": "10%",
+        "activity_price": "",
+        "thumb": "https://imgs.zuihuigou.shop/1563373162341",
+        "long_thumb": "",
+        "open_time": "每天13:00",
+        "user_items": [
+          {
+            "id": 3071,
+            "uid": 2,
+            "nickname": "昊天",
+            "avatar": "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKTHX3FJS9ib6jNN4PIicWAchYhSMNabAZPTWD42WqNXbib9qKibhlkglOticqt3wqoZgl57RVF9giaia24Q/132"
+          },
+          {
+            "id": 3070,
+            "uid": 201,
+            "nickname": "Kyle",
+            "avatar": "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIy1DP0Cwasg1B4p2S8c7xlEMtX3w8Rb2f2qD52oxg6jDiaV55Ja9R1wKCCjxmEyhF6HdyOue5FLlQ/132"
+          }
+        ],
+        "user_num": 2
+      },
+      {
+        "id": "650",
+        "title": "3款任选！正品凯米尼女士羽绒服（面料：100%尼龙，填充物：90%鸭绒）D",
+        "market_price": "1398.00",
+        "shop_price": "259.00",
+        "cost_price": "0.00",
+        "member_price": "20%",
+        "store_price": "239",
+        "partner_price": "232",
+        "user_price": "10%",
+        "activity_price": "",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1563526710584",
+        "long_thumb": "",
+        "open_time": "每天13:00",
+        "user_items": [],
+        "user_num": 0
+      }
+    ]
+  }
+}

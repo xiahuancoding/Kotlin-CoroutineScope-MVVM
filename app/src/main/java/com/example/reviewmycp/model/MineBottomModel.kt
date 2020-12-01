@@ -26,5 +26,7 @@ data class MineBottomModel(
 
 data class OrderAndService(
     val icon:Int,
-    val content:String
+    val content:String,
+    var messageNumber:String = "",
+    val type:Int = 1 // 1我的订单 ， 2我的服务
 )

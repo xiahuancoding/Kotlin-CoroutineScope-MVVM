@@ -1,0 +1,14 @@
+{
+  "code": 0,
+  "message": "成功",
+  "data": {
+    "goods_list": [
+      {
+        "title": "包包1",
+        "code_no": 1,
+        "price": "33.00",
+        "thumbnail_url": "http://wyhmerchant.oss-cn-beijing.aliyuncs.com/merchant/app_logo_apk_1_20190529051107_s.jpg"
+      }
+    ]
+  }
+}

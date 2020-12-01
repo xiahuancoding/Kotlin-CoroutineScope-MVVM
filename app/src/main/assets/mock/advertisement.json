@@ -1,0 +1,19 @@
+{
+  "code" : 0,
+  "message" : "获取数据成功",
+  "response" : {
+    "channelId" : 2016120101,
+    "docId" : 1451880983492,
+    "docType" : 0,
+    "clickType" : 1,
+    "title" : "",
+    "content" : "",
+    "url" : "http://www.trs.com.cn",
+    "images" : [],
+    "imagesUrl"  : "http://img1.doubanio.com/view/group_topic/l/public/p150034507.jpg",
+    "source" : "",
+    "tag" : "",
+    "media" : "",
+    "ptime" : "2016-12-02 11:30:00"
+  }
+}

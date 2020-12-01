@@ -1,0 +1,16 @@
+{
+  "time": 1575612977.533,
+  "message": "ok",
+  "code": 0,
+  "status": 200,
+  "data": [
+    {
+      "pay_type": "9",
+      "status": true
+    },
+    {
+      "pay_type": "7",
+      "status": true
+    }
+  ]
+}

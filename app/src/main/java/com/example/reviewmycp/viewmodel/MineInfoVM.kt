@@ -8,6 +8,7 @@ import com.example.reviewmycp.model.UserInfoModel
 import com.example.reviewmycp.model.UserMoneyModel
 import com.example.reviewmycp.net.HttpConstant
 import com.example.reviewmycp.utlis.RepositoryUtils
+import kotlinx.coroutines.newFixedThreadPoolContext
 import java.util.*
 
 class MineInfoVM : BaseViewModel(){
@@ -62,6 +63,11 @@ class MineInfoVM : BaseViewModel(){
     fun refreshBottomData(){
          bottomData.sortBy { it.itemType }
          mMineBottomAdapter?.setNewData(bottomData)
+    }
+
+    fun clearBottomData(){
+        mMineBottomAdapter?.data?.clear()
+        mMineBottomAdapter?.notifyDataSetChanged()
     }
 
 }

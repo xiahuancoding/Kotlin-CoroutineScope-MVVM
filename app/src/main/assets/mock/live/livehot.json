@@ -1,0 +1,38 @@
+{
+  "code": 0,
+  "message": "获取地址失败",
+  "data": [
+    {
+      "platform_goods_id":793,
+      "scene_key":"123131",
+      "code_no": 12344,
+      "price": 69.00,
+      "thumbnail_url":"https://img.weizhegouquanqiufuwuzhongxin.cn/1571127987221.jpg",
+      "link":"链接地址",
+      "title":"第2件0元！正品朵拉朵尚电动按摩眼霜（买1支送1支）M7",
+      "rank": 1
+    },
+
+    {
+      "platform_goods_id":2060,
+      "scene_key":"123131",
+      "code_no": 12344,
+      "price": 500.00,
+      "thumbnail_url":"https://img.weizhegouquanqiufuwuzhongxin.cn/1571125033121.jpg",
+      "link":"链接地址",
+      "title":"100年传世珐琅",
+      "rank": 2
+    },
+     {
+      "platform_goods_id":794,
+      "scene_key":"123131",
+      "code_no": 12344,
+      "price": 59.00,
+      "thumbnail_url":"https://img.weizhegouquanqiufuwuzhongxin.cn/1563530811726",
+      "link":"链接地址",
+      "title":"95%棉！4条佳帝曼纯棉男士内裤（全国包邮）D222 ",
+       "rank": 3
+    }
+
+  ]
+}

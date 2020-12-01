@@ -1,0 +1,27 @@
+{
+  "time": 1573026145.502,
+  "message": "ok",
+  "code": 0,
+  "status": 200,
+  "data": {
+    "id": 4,
+    "group_type": 0,
+    "good_id": 2126,
+    "good_name": "starbucks",
+    "good_thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1572489647994.jpg",
+    "success_num": 2,
+    "market_price": "100.00",
+    "shop_price": "9.90",
+    "member_group_price": "90.00",
+    "store_group_price": "70.00",
+    "partner_group_price": "60.00",
+    "goods_sale_num": 3,
+    "start_time": 1572969600,
+    "end_time": 1572969500,
+    "due_time": 1572969599,
+    "is_enable": 1,
+    "is_delflag": 0,
+    "differ_num": 1,
+    "group_sn": "2019110515423914373"
+  }
+}

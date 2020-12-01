@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.bumptech.glide.Glide
 import com.example.reviewmycp.R
 import com.example.reviewmycp.adapter.MineBottomAdapter
@@ -18,7 +19,7 @@ import com.example.reviewmycp.utlis.*
 import com.example.reviewmycp.viewmodel.MineInfoVM
 import kotlinx.android.synthetic.main.fragment_mine.*
 
-class MineFragment : BaseFragment<MineInfoVM>() {
+class MineFragment : BaseFragment<MineInfoVM>(),SwipeRefreshLayout.OnRefreshListener {
 
 
     override fun layoutId(): Int = R.layout.fragment_mine
@@ -26,6 +27,7 @@ class MineFragment : BaseFragment<MineInfoVM>() {
 
     override fun initView(savedInstanceState: Bundle?) {
         initRecycleView()
+        swipe_refresh.setOnRefreshListener(this)
     }
 
     override fun initData() {
@@ -38,11 +40,12 @@ class MineFragment : BaseFragment<MineInfoVM>() {
     private fun observerAllData() {
         viewModel.userInfoData.observe(this, Observer {
             // Log.d("xiecheng","携程请求的数据userInfoData-----------------------${it.member.username}")
+            stopRefresh()
             setUserInfo(it)
-
         })
         viewModel.userApplyShopData.observe(this, Observer {
             Log.d("xiecheng", "携程请求的数据userApplyShopData-----------------------${it.isStore}")
+            stopRefresh()
             if (it != null) {
                 viewModel.applyItem.mUserAsKeeperInfo = it
                 isShowApplyShopManagerNotifyWindow(it)
@@ -52,6 +55,7 @@ class MineFragment : BaseFragment<MineInfoVM>() {
         })
         viewModel.userApplyShopSwitchData.observe(this, Observer {
             Log.d("xiecheng", "携程请求的数据userApplyShopSwitchData-----------------------${it}")
+            stopRefresh()
             if (it){
                 viewModel.bottomData.add(viewModel.applyItem)
                 viewModel.refreshBottomData()
@@ -59,6 +63,7 @@ class MineFragment : BaseFragment<MineInfoVM>() {
         })
 
         viewModel.userMoneyData.observe(this, Observer {
+            stopRefresh()
             Log.d("xiecheng", "携程请求的数据userMoneyData-----------------------${it.balance}")
             viewModel.fundItem.mUserMoney = it
             viewModel.bottomData.add(viewModel.fundItem)
@@ -196,4 +201,16 @@ class MineFragment : BaseFragment<MineInfoVM>() {
 
     }
 
+    override fun onRefresh() {
+        viewModel.clearBottomData()
+        viewModel.requestUserInfo()
+        viewModel.requestUserApplyShopManager()
+        viewModel.requestUserInfoMoney()
+    }
+
+    private fun stopRefresh(){
+        if (swipe_refresh != null && swipe_refresh.isRefreshing){
+            swipe_refresh.isRefreshing = false
+        }
+    }
 }

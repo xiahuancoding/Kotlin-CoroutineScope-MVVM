@@ -1,0 +1,51 @@
+{
+  "time": 1572588562.795,
+  "message": "ok",
+  "code": 0,
+  "status": 200,
+  "data": {
+    "data": [
+      {
+        "nickname": "Jeff Wu",
+        "avatar": "https://thirdwx.qlogo.cn/mmopen/vi_32/g4wzd5sQZzCgc5KXib6IH8MRJs7Jr1lvRjVvoicb0ricCBpibyNMQ2xSEZ69zJyRiaQ05UXh7FNibficRCf0XNysmC7Vw/132",
+        "is_lead": "1"
+      },
+      {
+        "nickname": "云胡不喜",
+        "avatar": "https://thirdwx.qlogo.cn/mmopen/vi_32/Sd4fue86C0Evmwiae7nzFZnPr8jLKOKu83uhobOUwRYZBtLPMNBYYH3vEumbjylkhaUiaRNow5B8eMno2eTQSHcQ/132",
+        "is_lead": "0"
+      },
+      {
+        "nickname": "、Dieem",
+        "avatar": "https://thirdwx.qlogo.cn/mmopen/vi_32/rCdIFDRQATEsyMkzsyAaTibFd0mahPMsercwAj4uyZKqnRYzv4h3hM7xETxaTbWXxg7DhCibGogz3tILbqhLmVVw/132",
+        "is_lead": "0"
+      }
+    ],
+    "differ_num": 7,
+    "success_num": 10,
+    "end_time": "1572583623",
+    "group_sn": "2019103017331428220",
+    "is_join": 0,
+    "good_detail": {
+      "id": "1",
+      "group_type": "0",
+      "good_id": "560",
+      "good_name": "包包",
+      "success_num": "10",
+      "market_price": "10.00",
+      "member_group_price": "8.00",
+      "store_group_price": "0.00",
+      "partner_group_price": "0.00",
+      "goods_sale_num": "10",
+      "start_time": "1573315200",
+      "end_time": "1572402858",
+      "good_thumb": "https://thirdwx.qlogo.cn/mmopen/vi_32/rCdIFDRQATEsyMkzsyAaTibFd0mahPMsercwAj4uyZKqnRYzv4h3hM7xETxaTbWXxg7DhCibGogz3tILbqhLmVVw/132",
+      "valid_hours": "0",
+      "is_enable": "1",
+      "is_delflag": "0",
+      "created_at": "1572270979",
+      "updated_at": "01572327949",
+      "subtitle": "测试数据"
+    }
+  }
+}

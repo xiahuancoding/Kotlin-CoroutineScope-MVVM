@@ -1,0 +1,30 @@
+{
+  "time": 1566178249.138,
+  "message": "ok",
+  "code": 0,
+  "status": 200,
+  "data": {
+    "video": [
+      {
+       "thumb" :"https://img.weizhegouquanqiufuwuzhongxin.cn/1568181892945.jpg",
+        "content": "微折购赚钱中",
+        "play": 10000
+      },
+      {
+        "thumb" :"https://img.weizhegouquanqiufuwuzhongxin.cn/1565057576764",
+        "content": "商品解散",
+        "play": 10000
+      },
+      {
+        "thumb" :"https://img.weizhegouquanqiufuwuzhongxin.cn/1566096559582",
+        "content": "微折购赚钱中",
+        "play": 10000
+      },
+      {
+        "thumb" :"https://img.weizhegouquanqiufuwuzhongxin.cn/1564825859363",
+        "content": "微折购赚钱中",
+        "play": 10000
+      }
+    ]
+  }
+}

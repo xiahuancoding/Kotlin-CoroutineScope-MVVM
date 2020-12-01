@@ -1,0 +1,79 @@
+{
+  "time": 1588054708.185,
+  "message": "ok",
+  "code": 0,
+  "status": 200,
+  "data": [
+    {
+      "start_time": 0,
+      "end_time": 0,
+      "time": "27日",
+      "process": 0,
+      "name": "往期精选",
+      "is_checked": 0,
+      "goodsData": [
+        {
+          "title": "美的（Midea）料理机家用榨汁机 多功能三杯搅拌机 婴儿辅食机 研磨绞肉机WBL25B36（李现推荐）测试行数多个是\n",
+          "subtitle": "测试附表题",
+          "show_stock_num": 19961,
+          "stock_double": "1",
+          "seckill_type":"1",
+          "seckill_thumb":"https://qnimg.ec-cloudtech.com/1581733864685.jpg",
+          "seckill_begin_time": "1587891600",
+          "seckill_end_time": "1587895200",
+          "market_price": "110.00",
+          "stock": "19961",
+          "shop_price": "100.00",
+          "member_price": "95",
+          "store_price": "90",
+          "partner_price": "85",
+          "team_price": "80.00",
+          "thumb": "https://qnimg.ec-cloudtech.com/1578636611404.jpg",
+          "long_thumb": "https://qnimg.ec-cloudtech.com/1581733864685.jpg",
+          "id": "1138",
+          "show_sale_num": 193,
+          "percent": 99,
+          "goods_sale_type": 2,
+          "seckill_id": 0,
+          "is_set_subscribe": 0
+        }
+      ]
+
+    },
+    {
+      "start_time": 0,
+      "end_time": 27712000,
+      "name": "进行中",
+      "process": 1,
+      "time": "02:00",
+      "goodsData": [
+        {
+          "title": "测试商品123123",
+          "subtitle": "我是测试商品的副标题",
+          "show_stock_num": 418,
+          "stock_double": "2",
+          "seckill_type":"1",
+          "seckill_thumb":"https://qnimg.ec-cloudtech.com/1586238383911.jpg",
+          "seckill_begin_time": "1588039200",
+          "seckill_end_time": "1588082400",
+          "market_price": "199.00",
+          "stock": "209",
+          "shop_price": "19.00",
+          "member_price": "79",
+          "store_price": "75",
+          "partner_price": "69",
+          "team_price": "59.00",
+          "thumb": "https://qnimg.ec-cloudtech.com/1586238383911.jpg",
+          "long_thumb": "https://qnimg.ec-cloudtech.com/1587893962016.jpg",
+          "id": "1240",
+          "show_sale_num": 48600,
+          "percent": 0,
+          "goods_sale_type": 3,
+          "seckill_id": 0,
+          "is_set_subscribe": 0
+        }
+      ],
+      "is_checked": 1,
+      "id": 2
+    }
+  ]}

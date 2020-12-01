@@ -1,0 +1,30 @@
+{
+  "time": 1566178249.138,
+  "message": "ok",
+  "code": 0,
+  "status": 200,
+  "data": {
+    "video": [
+      {
+       "thumb" :"https://img.weizhegouquanqiufuwuzhongxin.cn/1566095386771?imageView2/1/w/350/h/350",
+        "content": "微折购赚钱中",
+        "play": 10000
+      },
+      {
+        "thumb" :"https://img.weizhegouquanqiufuwuzhongxin.cn/1565057576764?imageView2/1/w/350/h/350",
+        "content": "微折购赚钱中",
+        "play": 10000
+      },
+      {
+        "thumb" :"https://img.weizhegouquanqiufuwuzhongxin.cn/1566096559582?imageView2/1/w/350/h/350",
+        "content": "微折购赚钱中",
+        "play": 10000
+      },
+      {
+        "thumb" :"https://img.weizhegouquanqiufuwuzhongxin.cn/1564825859363?imageView2/1/w/350/h/350",
+        "content": "微折购赚钱中",
+        "play": 10000
+      }
+    ]
+  }
+}

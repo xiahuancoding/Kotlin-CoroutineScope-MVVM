@@ -1,0 +1,221 @@
+{
+  "time": 1566208121.841,
+  "message": "ok",
+  "code": 0,
+  "status": 200,
+  "data": {
+    "likeList": [
+      {
+        "id": "1477",
+        "sku_id": "33176",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1565057576764?imageView2/1/w/350/h/350",
+        "title": "青少年/成人背背佳（规格任选）X",
+        "lable_list": [],
+        "subtitle": "买一送一",
+        "shop_price": "58.00",
+        "market_price": "198.00",
+        "store_price": "47.00",
+        "stock": "25117",
+        "status": "10",
+        "sale_num": "1455"
+      },
+      {
+        "id": "1305",
+        "sku_id": "32278",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1564365607614?imageView2/1/w/350/h/350",
+        "title": "️吉林直发！买3棵送2棵长白山万钱树保鲜人参 （3颗100克+2颗50克)P16",
+        "lable_list": [],
+        "subtitle": "",
+        "shop_price": "59.00",
+        "market_price": "158.00",
+        "store_price": "49.00",
+        "stock": "3032",
+        "status": "10",
+        "sale_num": "0"
+      },
+      {
+        "id": "2108",
+        "sku_id": "90681",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1566100356957?imageView2/1/w/350/h/350",
+        "title": "产地直发！5斤惠和一号板栗贝贝南瓜F1478（超级好吃，4-6个）",
+        "lable_list": [
+          {
+            "id": "2",
+            "label": "新品抢鲜",
+            "back_color": "#FFE7F0",
+            "font_color": "#F76C90"
+          }
+        ],
+        "subtitle": "免费送",
+        "shop_price": "32.90",
+        "market_price": "79.00",
+        "store_price": "27.00",
+        "stock": "5099",
+        "status": "10",
+        "sale_num": "0"
+      },
+      {
+        "id": "2139",
+        "sku_id": "91997",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1566095386771?imageView2/1/w/350/h/350",
+        "title": "高颜值又实用！2个正乾免打孔浴室厨房壁挂架U65",
+        "lable_list": [],
+        "subtitle": "",
+        "shop_price": "29.90",
+        "market_price": "68.00",
+        "store_price": "24.00",
+        "stock": "2919",
+        "status": "10",
+        "sale_num": "0"
+      },
+      {
+        "id": "2140",
+        "sku_id": "91002",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1566096211036?imageView2/1/w/350/h/350",
+        "title": "高档五金手工缝绣蜜蜂包大/小任选F700（上海直邮大号14cm*9cm*21cm  小号13cm*5.5cm*20cm ）",
+        "lable_list": [],
+        "subtitle": "",
+        "shop_price": "99.00",
+        "market_price": "199.00",
+        "store_price": "85.00",
+        "stock": "18107",
+        "status": "10",
+        "sale_num": "0"
+      },
+      {
+        "id": "2141",
+        "sku_id": "91017",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1566096559582?imageView2/1/w/350/h/350",
+        "title": "第2盒20元！2支托嗳灰指甲脱甲抑菌液D127",
+        "lable_list": [],
+        "subtitle": "",
+        "shop_price": "59.90",
+        "market_price": "118.00",
+        "store_price": "46.00",
+        "stock": "5048",
+        "status": "10",
+        "sale_num": "0"
+      },
+      {
+        "id": "2142",
+        "sku_id": "91016",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1566096559582?imageView2/1/w/350/h/350",
+        "title": "1支托嗳灰指甲脱甲抑菌液D127",
+        "lable_list": [],
+        "subtitle": "",
+        "shop_price": "39.90",
+        "market_price": "59.00",
+        "store_price": "29.00",
+        "stock": "5016",
+        "status": "10",
+        "sale_num": "0"
+      },
+      {
+        "id": "1379",
+        "sku_id": "32828",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1564825859363?imageView2/1/w/350/h/350",
+        "title": "全码瘦瘦包K",
+        "lable_list": [],
+        "subtitle": "",
+        "shop_price": "248.00",
+        "market_price": "580.00",
+        "store_price": "220.00",
+        "stock": "3082",
+        "status": "10",
+        "sale_num": "0"
+      },
+      {
+        "id": "1241",
+        "sku_id": "31867",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1564222562573?imageView2/1/w/350/h/350",
+        "title": "抖音同款！5卷厨卫防水防油防霉美缝贴（3.2米/卷）W6",
+        "lable_list": [],
+        "subtitle": "",
+        "shop_price": "39.00",
+        "market_price": "79.00",
+        "store_price": "31.00",
+        "stock": "10043",
+        "status": "10",
+        "sale_num": "0"
+      },
+      {
+        "id": "1282",
+        "sku_id": "32014",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1566123239592?imageView2/1/w/350/h/350",
+        "title": "限5000组！割码药妆斑宝美白祛斑霜大样K",
+        "lable_list": [],
+        "subtitle": "",
+        "shop_price": "129.90",
+        "market_price": "360.00",
+        "store_price": "99.00",
+        "stock": "3123",
+        "status": "10",
+        "sale_num": "0"
+      },
+      {
+        "id": "2107",
+        "sku_id": "90680",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1566098191761?imageView2/1/w/350/h/350",
+        "title": "全码！SKV铂金眼霜（全国包邮）K",
+        "lable_list": [],
+        "subtitle": "",
+        "shop_price": "69.00",
+        "market_price": "138.00",
+        "store_price": "49.00",
+        "stock": "5213",
+        "status": "10",
+        "sale_num": "0"
+      },
+      {
+        "id": "1028",
+        "sku_id": "30439",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1563864731499?imageView2/1/w/350/h/350",
+        "title": "过关商品！19.9元/2包泰国蜈蚣丸K（买4包送1包）（出口版和本土版随机发）",
+        "lable_list": [],
+        "subtitle": "",
+        "shop_price": "39.80",
+        "market_price": "275.00",
+        "store_price": "30.00",
+        "stock": "4388",
+        "status": "10",
+        "sale_num": "0"
+      },
+
+      {
+        "id": "2134",
+        "sku_id": "91752",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1566097239255?imageView2/1/w/350/h/350",
+        "title": "2套羽妃韵150D印花提花冰丝凉席3件套A31",
+        "lable_list": [],
+        "subtitle": "",
+        "shop_price": "109.00",
+        "market_price": "218.00",
+        "store_price": "95.00",
+        "stock": "1013",
+        "status": "10",
+        "sale_num": "0"
+      },
+      {
+        "id": "2111",
+        "sku_id": "90755",
+        "thumb": "https://img.weizhegouquanqiufuwuzhongxin.cn/1566120351231?imageView2/1/w/350/h/350",
+        "title": "锦茂透气网面运动鞋（全国包邮，透气飞织+舒适内里）H41",
+        "lable_list": [
+          {
+            "id": "2",
+            "label": "新品抢鲜",
+            "back_color": "#FFE7F0",
+            "font_color": "#F76C90"
+          }
+        ],
+        "subtitle": "",
+        "shop_price": "59.90",
+        "market_price": "129.00",
+        "store_price": "49.00",
+        "stock": "3174",
+        "status": "10",
+        "sale_num": "0"
+      }
+    ]
+  }
+}

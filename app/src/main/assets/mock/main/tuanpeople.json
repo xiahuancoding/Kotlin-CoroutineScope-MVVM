@@ -1,0 +1,33 @@
+{
+  "time": 1572584140.533,
+  "message": "ok",
+  "code": 0,
+  "status": 200,
+  "data": {
+    "data": [
+      {
+        "nickname": "Jeff Wu",
+        "avatar": "https://thirdwx.qlogo.cn/mmopen/vi_32/g4wzd5sQZzCgc5KXib6IH8MRJs7Jr1lvRjVvoicb0ricCBpibyNMQ2xSEZ69zJyRiaQ05UXh7FNibficRCf0XNysmC7Vw/132",
+        "is_lead": "1"
+      },
+      {
+        "nickname": "云胡不喜",
+        "avatar": "https://thirdwx.qlogo.cn/mmopen/vi_32/Sd4fue86C0Evmwiae7nzFZnPr8jLKOKu83uhobOUwRYZBtLPMNBYYH3vEumbjylkhaUiaRNow5B8eMno2eTQSHcQ/132",
+        "is_lead": "0"
+      },
+      {
+        "nickname": "、Dieem",
+        "avatar": "https://thirdwx.qlogo.cn/mmopen/vi_32/rCdIFDRQATEsyMkzsyAaTibFd0mahPMsercwAj4uyZKqnRYzv4h3hM7xETxaTbWXxg7DhCibGogz3tILbqhLmVVw/132",
+        "is_lead": "0"
+      }
+    ],
+    "differ_num": 7,
+    "success_num": 10,
+    "end_time": "1572583623",
+    "end_time": "1572583623",
+    "differ_time": 1573008320,
+    "group_sn": "2019110515423914373",
+    "is_join": 0,
+    "status": "1"
+  }
+}
