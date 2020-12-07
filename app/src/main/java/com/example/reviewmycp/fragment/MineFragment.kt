@@ -16,10 +16,12 @@ import com.example.reviewmycp.model.UserAsKeeperInfo
 import com.example.reviewmycp.model.UserInfoModel
 import com.example.reviewmycp.model.UserMoneyModel
 import com.example.reviewmycp.utlis.*
+import com.example.reviewmycp.view.popwindow.UserUpdateSuccessPopWindow
+import com.example.reviewmycp.view.popwindow.VipDownToNormalPopWindow
 import com.example.reviewmycp.viewmodel.MineInfoVM
 import kotlinx.android.synthetic.main.fragment_mine.*
 
-class MineFragment : BaseFragment<MineInfoVM>(),SwipeRefreshLayout.OnRefreshListener {
+class MineFragment : BaseFragment<MineInfoVM>(), SwipeRefreshLayout.OnRefreshListener {
 
 
     override fun layoutId(): Int = R.layout.fragment_mine
@@ -56,7 +58,7 @@ class MineFragment : BaseFragment<MineInfoVM>(),SwipeRefreshLayout.OnRefreshList
         viewModel.userApplyShopSwitchData.observe(this, Observer {
             Log.d("xiecheng", "携程请求的数据userApplyShopSwitchData-----------------------${it}")
             stopRefresh()
-            if (it){
+            if (it) {
                 viewModel.bottomData.add(viewModel.applyItem)
                 viewModel.refreshBottomData()
             }
@@ -81,33 +83,33 @@ class MineFragment : BaseFragment<MineInfoVM>(),SwipeRefreshLayout.OnRefreshList
     }
 
     private fun isShowApplyShopManagerNotifyWindow(data: UserAsKeeperInfo) {
-//        if (data != null && viewModel.mMineBottomAdapter != null) {
-        // 升级通知和卓越店主
-//            if (data.showNotifyDialog()) {
-//                val window: UserUpdateSuccessPopWindow = UserUpdateSuccessPopWindow.getInstance(mContext)
-//                window.showPopupWindow()
-//            }
+
+        if (viewModel.mMineBottomAdapter != null) {
+            // 升级通知和卓越店主
+            if (data.showNotifyDialog()) {
+                val window: UserUpdateSuccessPopWindow =
+                    UserUpdateSuccessPopWindow.getInstance(activity!!)
+                window.showPopupWindow()
+            }
 
 //            if (data.isGold() && data.is_gold_notify() == 0) {
 //                val window: BrilliantApplySuccessPopWindow =
 //                    BrilliantApplySuccessPopWindow.getInstance(mContext)
 //                window.showPopupWindow()
 //            }
-//        }
+        }
 
 
         // 降级通知
-//        if (data != null && adapter != null) {
-//            if (!data.isGold() && data.is_gold_down_notify() === 0) {
-//                val window: BrilliantDownVipPopWindow =
-//                    BrilliantDownVipPopWindow.getSingle(mContext)
-//                window.showPopupWindow()
-//            }
-//            if (!data.isGold() && !data.isShopKeeper() && data.is_down_notify() === 0) {
-//                val window: VipDownToNormalPopWindow = VipDownToNormalPopWindow.getSingle(mContext)
-//                window.showPopupWindow()
-//            }
-//        }
+        if (!data.isGold() && data.is_gold_down_notify == 0) {
+//            val window: BrilliantDownVipPopWindow =
+//                BrilliantDownVipPopWindow.getSingle(mContext)
+//            window.showPopupWindow()
+        }
+        if (!data.isGold() && !data.isShopKeeper() && data.is_down_notify == 0) {
+            val window: VipDownToNormalPopWindow = VipDownToNormalPopWindow.getInstance(activity!!)
+            window.showPopupWindow()
+        }
 
 
     }
@@ -170,8 +172,6 @@ class MineFragment : BaseFragment<MineInfoVM>(),SwipeRefreshLayout.OnRefreshList
         viewModel.refreshBottomData()
 
 
-
-
 //        viewModel.launchString(
 //            requestApi = viewModel.mMineRepo.mService.getString(HttpConstant.MEMBER_MEMBER_INFO, WeakHashMap()
 //            ),
@@ -208,8 +208,8 @@ class MineFragment : BaseFragment<MineInfoVM>(),SwipeRefreshLayout.OnRefreshList
         viewModel.requestUserInfoMoney()
     }
 
-    private fun stopRefresh(){
-        if (swipe_refresh != null && swipe_refresh.isRefreshing){
+    private fun stopRefresh() {
+        if (swipe_refresh != null && swipe_refresh.isRefreshing) {
             swipe_refresh.isRefreshing = false
         }
     }

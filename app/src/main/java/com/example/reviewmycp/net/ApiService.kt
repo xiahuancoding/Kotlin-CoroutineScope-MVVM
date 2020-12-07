@@ -54,4 +54,6 @@ interface ApiService {
     @POST
     suspend fun requestApplyShopManagerSwitch(@Url url:String, @Body body: RequestBody): BaseResult<Boolean>
 
+
+
 }

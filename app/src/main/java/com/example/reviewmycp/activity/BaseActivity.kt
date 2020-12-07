@@ -111,7 +111,7 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(), Coroutine
                 .cancelable(false)
                 .cornerRadius(8f)
                 .customView(R.layout.custom_progress_dialog_view, noVerticalPadding = true)
-                .lifecycleOwner(this)
+//                .lifecycleOwner(this)
                 .maxWidth(R.dimen.dialog_width)
         }
         dialog?.show()
